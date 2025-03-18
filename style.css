@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(45deg, #0d0d0d, #1a1a1a, #2a2a2a);
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0b90b;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(240, 185, 11, 0.8);
+}
+
+nav a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #f0b90b;
+    transform: scale(1.1);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background: radial-gradient(circle, #111, #222);
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #f0b90b;
+    text-shadow: 0 0 20px rgba(240, 185, 11, 0.9);
+}
+
+.hero p {
+    font-size: 22px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 80px 20px;
+}
+
+.plan {
+    background: linear-gradient(135deg, #222, #333);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+}
+
+.plan h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0b90b;
+    margin-bottom: 20px;
+}
+
+.plan ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.plan ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.plan ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bronze {
+    border: 3px solid #cd7f32;
+    background: linear-gradient(145deg, #4b2e19, #5d3a1a);
+}
+
+.silver {
+    border: 3px solid #c0c0c0;
+    background: linear-gradient(145deg, #616161, #7b7b7b);
+}
+
+.gold {
+    border: 3px solid #ffd700;
+    background: linear-gradient(145deg, #aa7f00, #ffcc00);
+}
+
+.platinum {
+    border: 3px solid #e5e4e2;
+    background: linear-gradient(145deg, #828282, #a9a9a9);
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 10px #f0b90b; }
+    50% { text-shadow: 0 0 20px #f0b90b, 0 0 30px #ffcc00; }
+    100% { text-shadow: 0 0 10px #f0b90b; }
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.plan:hover h2 {
+    animation: glowing 1.5s infinite;
+}
+
+.hero h1 {
+    animation: glowing 2s infinite;
+}
+
+.plan:hover {
+    animation: floating 2s infinite;
+}
